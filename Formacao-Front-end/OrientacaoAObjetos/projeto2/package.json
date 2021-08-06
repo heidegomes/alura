@@ -1,0 +1,12 @@
+{
+  "name": "canil",
+  "version": "1.0.0",
+  "description": "Controle de atividades dos cachorros no canil",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Heide Gomes",
+  "license": "ISC",
+  "type": "module"
+}
