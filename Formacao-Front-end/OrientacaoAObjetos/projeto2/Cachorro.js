@@ -12,21 +12,4 @@ export class Cachorro {
         this.porte = porte;
         this.cor = cor;
     }
-
-    comer(valor){
-        if (this.valor = 7){
-            return true;
-        }else
-            return false;
-    }
-
-    dormir(valor){
-        if (this.valor >= 7);
-            return;
-    }
-
-    brincar(valor){
-        if (this.valor > 12);
-            return;
-    }
 }
