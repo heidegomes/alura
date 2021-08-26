@@ -1,19 +1,22 @@
-const botaoConclui = () => {
-    const quaquerlNomeVariavel = document.createElement('button')
+const concluirTarefa = (atualiza, id) => {
+    const tarefaCadastrada = JSON.parse(localStorage.getItem('tarefas'))
 
-    quaquerlNomeVariavel.classList.add('check-button')
-    quaquerlNomeVariavel.innerText = 'concluir'
-    quaquerlNomeVariavel.addEventListener('click', concluirTarefa)
+    tarefaCadastrada[id].concluida = !tarefaCadastrada[id].concluida
+    localStorage.setItem('tarefas', JSON.stringify(tarefaCadastrada))
 
-    return quaquerlNomeVariavel
+    atualiza()
 }
 
-const concluirTarefa = (evento) => {
-    const botaoConclui = evento.target
+const botaoConclui = (atualiza, id) => {
+    const botaoConclui = document.createElement('button')
 
-    const tarefaCompleta =botaoConclui.parentElement
+    botaoConclui.classList.add('check-button')
+    botaoConclui.innerText = 'concluir'
+    botaoConclui.addEventListener('click', () => concluirTarefa(atualiza, id))
 
-    tarefaCompleta.classList.toggle('done')
+    return botaoConclui
 }
+
+
 
 export default botaoConclui
