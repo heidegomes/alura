@@ -11,9 +11,14 @@ export class Cliente {
     //     }
     // }
 
-    constructor(nome, cpf, endereco){
+    constructor(nome, cpf, endereco, senha){
         this.nome = nome;
         this._cpf = cpf;
         this.endereco = endereco;
+        this._senha = senha;
     }
+    
+    autenticar(){
+        return true;
+    } 
 }
